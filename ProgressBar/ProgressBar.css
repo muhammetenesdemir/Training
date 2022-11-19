@@ -1,0 +1,30 @@
+*{
+    background-color: green;
+}
+
+div{
+    height: 25px;
+    border-radius:25px;
+}
+
+.container{
+    width: 40%;
+    margin: auto;
+    margin-top: 40%;
+    border: 3px solid #9985FB;
+    background-color: grey;
+    box-shadow: 0 0 15px #9985FB;
+}
+.progress{
+    width: 0%;
+    background-color: #f6c796;
+    animation: progress 10s infinite;
+}
+@keyframes progress{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
