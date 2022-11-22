@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="login-box">
+        <h1>LOGİN</h1>
+        <form>
+            <div class="user-box">
+                <input id="username" type="text" name="username" required="">
+                <label id="username-label">Username</label>
+            </div>
+            <div class="user-box">
+                <input id="password" type="password" name="password" required="">
+                <label id="password-label">PassWord</label>
+            </div>
+
+            <div class="button-form">
+                <button id="submit-btn" class="submit-btn" >Submit</button>
+                <div id="register">
+                    Don't have an account ?
+                    <a href="#">Register</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+</body>
+<script>
+    //let => local değişken value
+    //const sabit ve değişmez sadece ilk atanan değer geçerlidir.
+    //var global value olarak tanımlanır her yerde kullanılır 
+    let username = '';
+    let password = '';
+
+    //username
+    const inputUsername = document.getElementById('username');
+    const usernameLabel = document.getElementById("username-label");
+    //password
+    const inputPassword = document.getElementById('password');
+    const passwordLabel = document.getElementById("password-label");
+    const submitButton = document.getElementById('submit-btn');
+    
+    //Add Listener
+    inputUsername.addEventListener('input',updateValue);
+    inputPassword.addEventListener('input',updateValue);
+    submitButton.addEventListener('click',handleSubmitOnClick);
+
+
+    function updateValue(e){
+        const name = e.target.name;
+        let value = e.target.value;
+        if(value === '?'){
+            alert('? is not suitable letter');
+            value = ''
+        }
+        if(name === 'username'){
+            updateUsernameValue(value);
+        }else if(name === 'password'){
+            updatePasswordValue(value);
+        }
+        else if(name === "phone" || name === 'address'){
+        
+        }
+    }
+
+    // phone and addres some action
+
+
+
+    function updateUsernameValue(value){
+        username = value;
+        if(username.length > 0){      
+            usernameLabel.style.top='-85px';
+        } 
+        inputUsername.value=username;  
+    }
+    
+    function updatePasswordValue(value){
+        password = value;
+        if(password.length > 0){
+            passwordLabel.style.top='-85px';
+        }
+        inputPassword.value=password;
+    }
+
+    function handleSubmitOnClick(){
+        alert("username =>" +username + "/n" + "password => " + password); 
+    }
+    
+    
+</script>
+</html>
