@@ -1,0 +1,61 @@
+body{
+    background-color: #1c2a44;
+    overflow: hidden;
+}
+.circle{
+    animation: spin 2s infinite;
+}
+#outer-circle {
+    background: #344056;
+    border-radius: 50%;
+    height: 45vw;
+    width: 45vw;
+    position: relative;
+    margin: auto;
+    margin-top: 5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #02e4e7 ;
+}
+.inner-circle{
+    position: absolute;
+    background: #02e4e7;
+    border-radius: 50%;
+    height: 35vw;
+    width: 35vw;
+    top: 50%;
+    left: 50%;
+    margin: -17.5vw 0px 0px -17.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #03dff6;
+
+} 
+.inner-circle1{
+    position: absolute;
+    background: #aac5c6;
+    border-radius: 50%;
+    height: 25vw;
+    width: 25vw;
+    top: 50%;
+    left: 50%;
+    margin: -12.5vw 0px 0px -12.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #03dff6;
+    
+}   
+.inner-circle2{
+    position: absolute;
+    background: #d3dff6;
+    border-radius: 50%;
+    height: 15vw;
+    width: 15vw;
+    top: 50%;
+    left: 50%;
+    margin: -7.5vw 0px 0px -7.5vw;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #03dff6;
+    
+}    
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+} 
