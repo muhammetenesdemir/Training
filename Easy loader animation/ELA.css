@@ -1,0 +1,32 @@
+.container{
+    
+    display: flex;
+    flex-direction:row;
+    background-color: black;
+    width: 160px;
+    border-radius: 50px;
+
+}
+.rotating_div{
+    
+    width: 45px;
+    height: 45px;border-radius: 90px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation: coin_spin1 1s linear infinite;
+    margin: 5px;
+    
+}
+#rotation1{
+    background: red;
+}
+#rotation2{
+    background: green;
+}
+#rotation3{
+    background: blue;
+}
+@keyframes coin_spin1{
+    50%{
+        transform: rotateY(90deg);
+    }
+}
